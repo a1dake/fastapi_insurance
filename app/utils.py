@@ -1,6 +1,6 @@
 from typing import Dict, List
 from datetime import datetime
-from .schemas import RateCreate, RateItem
+from app.schemas import RateCreate, RateItem
 
 def parse_rates_from_json(json_data: Dict[str, List[RateItem]]):
     rates = []

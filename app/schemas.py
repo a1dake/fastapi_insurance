@@ -16,3 +16,21 @@ class RateItem(BaseModel):
 
 class RatesSchema(BaseModel):
     __root__: Dict[str, List[RateItem]]
+
+class RateUpdate(BaseModel):
+    effective_date: date
+    cargo_type: str
+    rate: float
+
+class RateDelete(BaseModel):
+    effective_date: date
+    cargo_type: str
+
+class RateOut(BaseModel):
+    id: int
+    effective_date: date
+    cargo_type: str
+    rate: float
+
+    class Config:
+        orm_mode = True
